@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://roshankhan72.github.io/sitemap.xml
+
+# Block common non-content files
+Disallow: /README.md
+Disallow: /script.js.map
+Disallow: /*.json$
