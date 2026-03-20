@@ -168,7 +168,7 @@
                         <h3>Programming</h3>
                     </div>
                     <div class="skill-list">
-                        <div class="skill-item">
+                        <div class="skill-item clickable-skill" data-skill="C">
                             <div class="skill-info">
                                 <span class="skill-name">C</span>
                                 <span class="skill-level">Advanced</span>
@@ -177,7 +177,7 @@
                                 <div class="skill-progress" data-width="85%"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item clickable-skill" data-skill="Java">
                             <div class="skill-info">
                                 <span class="skill-name">Java</span>
                                 <span class="skill-level">Advanced</span>
@@ -186,7 +186,7 @@
                                 <div class="skill-progress" data-width="80%"></div>
                             </div>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item clickable-skill" data-skill="Python">
                             <div class="skill-info">
                                 <span class="skill-name">Python</span>
                                 <span class="skill-level">Advanced</span>
@@ -204,14 +204,14 @@
                         <h3>Technologies</h3>
                     </div>
                     <div class="skill-tags">
-                        <span class="tech-tag">Machine Learning</span>
-                        <span class="tech-tag">Data Mining</span>
-                        <span class="tech-tag">DBMS</span>
-                        <span class="tech-tag">Android Development</span>
-                        <span class="tech-tag">Data Structures</span>
-                        <span class="tech-tag">Algorithms</span>
-                        <span class="tech-tag">OOP Concepts</span>
-                        <span class="tech-tag">Web Development</span>
+                        <span class="tech-tag clickable-tech" data-tech="Machine Learning">Machine Learning</span>
+                        <span class="tech-tag clickable-tech" data-tech="Data Mining">Data Mining</span>
+                        <span class="tech-tag clickable-tech" data-tech="DBMS">DBMS</span>
+                        <span class="tech-tag clickable-tech" data-tech="Android Development">Android Development</span>
+                        <span class="tech-tag clickable-tech" data-tech="Data Structures">Data Structures</span>
+                        <span class="tech-tag clickable-tech" data-tech="Algorithms">Algorithms</span>
+                        <span class="tech-tag clickable-tech" data-tech="OOP Concepts">OOP Concepts</span>
+                        <span class="tech-tag clickable-tech" data-tech="Web Development">Web Development</span>
                     </div>
                 </div>
 
@@ -221,14 +221,14 @@
                         <h3>Tools</h3>
                     </div>
                     <div class="skill-tags">
-                        <span class="tech-tag">Git</span>
-                        <span class="tech-tag">Android Studio</span>
-                        <span class="tech-tag">VS Code</span>
-                        <span class="tech-tag">Jupyter Notebook</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">TensorFlow</span>
-                        <span class="tech-tag">Scikit-learn</span>
-                        <span class="tech-tag">Postman</span>
+                        <span class="tech-tag clickable-tech" data-tech="Git">Git</span>
+                        <span class="tech-tag clickable-tech" data-tech="Android Studio">Android Studio</span>
+                        <span class="tech-tag clickable-tech" data-tech="VS Code">VS Code</span>
+                        <span class="tech-tag clickable-tech" data-tech="Jupyter Notebook">Jupyter Notebook</span>
+                        <span class="tech-tag clickable-tech" data-tech="MySQL">MySQL</span>
+                        <span class="tech-tag clickable-tech" data-tech="TensorFlow">TensorFlow</span>
+                        <span class="tech-tag clickable-tech" data-tech="Scikit-learn">Scikit-learn</span>
+                        <span class="tech-tag clickable-tech" data-tech="Postman">Postman</span>
                     </div>
                 </div>
             </div>
@@ -434,6 +434,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- Skill Info Modal -->
+    <div id="skillModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Skill Information</h2>
+            <div id="modalContent">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
 
     <script src="/script.js"></script>
 </body>

@@ -1009,6 +1009,124 @@ section {
   }
 }
 
+/* Clickable Skills and Technologies */
+.clickable-skill {
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: var(--border-radius);
+}
+
+.clickable-skill:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  background: var(--bg-tertiary);
+}
+
+.clickable-tech {
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+}
+
+.clickable-tech:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  background: var(--gradient-primary);
+  color: white;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: var(--shadow-xl);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close {
+  color: var(--text-secondary);
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.close:hover {
+  color: var(--text-primary);
+  transform: scale(1.1);
+}
+
+#modalTitle {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#modalContent {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+#modalContent h3 {
+  color: var(--text-primary);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#modalContent ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#modalContent li {
+  margin-bottom: 0.5rem;
+}
+
+#modalContent .project-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#modalContent .project-link:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 480px) {
   .container {
     padding: 0 15px;
