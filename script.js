@@ -321,6 +321,35 @@ function initParallaxEffect() {
     });
 }
 
+// Dynamic Project Filtering
+function initProjectFilters() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    if (filterButtons.length === 0 || projectCards.length === 0) return;
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all filter buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            const filterValue = button.getAttribute('data-filter');
+            
+            projectCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                
+                if (filterValue === 'all' || category === filterValue) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize theme
@@ -343,6 +372,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize parallax effect
     initParallaxEffect();
+
+    // Initialize project filters
+    initProjectFilters();
     
     // Event listeners
     themeToggle.addEventListener('click', toggleTheme);
@@ -359,18 +391,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!navMenu.contains(e.target) && !mobileMenu.contains(e.target)) {
             closeMobileMenu();
         }
-    });
-    
-    // Add hover effect to project cards
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-15px) scale(1.02)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
     });
     
     // Add ripple effect to buttons

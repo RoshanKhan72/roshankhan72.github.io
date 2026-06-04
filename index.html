@@ -109,7 +109,7 @@
                                 class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/mohammad-roshan-soudagar" target="_blank"
                             class="social-icon"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:roshan@example.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                        <a href="mailto:mohammadroshan72khan@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -257,97 +257,208 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
+            
+            <!-- Category Filters -->
+            <div class="projects-filter" id="projects-filter-bar">
+                <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+                <button class="filter-btn" data-filter="ai-ml" id="filter-ai-ml">AI & Machine Learning</button>
+                <button class="filter-btn" data-filter="android-sec" id="filter-android-sec">Android & Security</button>
+                <button class="filter-btn" data-filter="web-sys" id="filter-web-sys">Web & Systems</button>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+                <!-- Project 1: Smart Specs Integrated with ML for Blinds -->
+                <div class="project-card" data-category="ai-ml" id="project-smart-specs">
+                    <div class="project-image project-ai-ml">
                         <div class="project-placeholder">
-                            <i class="fas fa-shield-alt"></i>
+                            <i class="fas fa-eye-slash"></i>
                         </div>
                         <div class="project-overlay">
-                            <span class="project-status">Security Project</span>
+                            <span class="project-status">AI & ML</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Smart Specs with ML for Blinds</h3>
+                        <p>
+                            Assistive technology designed for visually impaired individuals, utilizing real-time computer vision and object detection models (YOLO) to recognize objects and provide spoken feedback.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">YOLO</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">TensorFlow</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/RoshanKhan72/Object-detection-for-visually-Impaired" target="_blank" class="project-link" id="link-specs-demo"><i class="fas fa-external-link-alt"></i> Repo</a>
+                            <a href="https://github.com/RoshanKhan72/Object-detection-for-visually-Impaired" target="_blank" class="project-link" id="link-specs-code"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Smart Placement Advisor -->
+                <div class="project-card" data-category="ai-ml" id="project-placement-advisor">
+                    <div class="project-image project-ai-ml">
+                        <div class="project-placeholder">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status">AI & ML</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Smart Placement Advisor</h3>
+                        <p>
+                            A predictive data science system that evaluates students' academic records, predicts hiring outcomes, and recommends targeted preparation courses based on historical placement data.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Predictive Modeling</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/RoshanKhan72/Smart-Placement-Advisor" target="_blank" class="project-link" id="link-placement-demo"><i class="fas fa-external-link-alt"></i> Repo</a>
+                            <a href="https://github.com/RoshanKhan72/Smart-Placement-Advisor" target="_blank" class="project-link" id="link-placement-code"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Fake News Detection -->
+                <div class="project-card" data-category="ai-ml" id="project-fake-news">
+                    <div class="project-image project-ai-ml">
+                        <div class="project-placeholder">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status">AI & ML</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Fake News Detection</h3>
+                        <p>
+                            An NLP application built to analyze news articles and classify them as genuine or fake using text classification, vectorization algorithms, and machine learning models.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Text Mining</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/RoshanKhan72" target="_blank" class="project-link" id="link-news-demo"><i class="fas fa-external-link-alt"></i> Profile</a>
+                            <a href="https://github.com/RoshanKhan72" target="_blank" class="project-link" id="link-news-code"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: PrivyPing -->
+                <div class="project-card" data-category="android-sec" id="project-privyping">
+                    <div class="project-image project-android-sec">
+                        <div class="project-placeholder">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status">Android & Security</span>
                         </div>
                     </div>
                     <div class="project-content">
                         <h3>PrivyPing</h3>
                         <p>
-                            We worked together as a 4-member team to develop an innovative application that analyzes
-                            notifications and multimedia content.
-                            The main function is to analyze notifications and multimedia, where I primarily focused on
-                            multimedia analysis -
-                            developing algorithms to analyze photos and videos and determine whether they are Real or AI
-                            Manipulated.
+                            A collaborative security application that analyzes notifications and processes multimedia files (photos and videos) using advanced deep learning to verify if content is authentic or AI-manipulated.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Multimedia Analysis</span>
-                            <span class="tech-tag">AI Detection</span>
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Android SDK</span>
+                            <span class="tech-tag">Deepfake Detection</span>
                             <span class="tech-tag">Security</span>
-                            <span class="tech-tag">Team Project</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/RoshanKhan72/PrivyPing" target="_blank" class="project-link"><i
-                                    class="fas fa-external-link-alt"></i> Demo</a>
-                            <a href="https://github.com/RoshanKhan72/PrivyPing" target="_blank" class="project-link"><i
-                                    class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/RoshanKhan72/PrivyPing" target="_blank" class="project-link" id="link-privyping-demo"><i class="fas fa-external-link-alt"></i> Repo</a>
+                            <a href="https://github.com/RoshanKhan72/PrivyPing" target="_blank" class="project-link" id="link-privyping-code"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
+                <!-- Project 5: AI-Integrated Doctor Appointment Booking Portal -->
+                <div class="project-card" data-category="web-sys" id="project-doctor-portal">
+                    <div class="project-image project-web-sys">
                         <div class="project-placeholder">
-                            <i class="fas fa-newspaper"></i>
+                            <i class="fas fa-laptop-medical"></i>
                         </div>
                         <div class="project-overlay">
-                            <span class="project-status">C++</span>
+                            <span class="project-status">Web & Systems</span>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Buffer Library - PBL</h3>
+                        <h3>Smart AI Doctor Booking Portal</h3>
                         <p>
-                            Comprehensive buffer management system implemented as part of Problem-Based Learning,
-                            focusing on efficient memory management and data operations.
+                            An AI-powered clinic management system featuring patient symptom analysis, doctor schedules, secure appointment booking, and patient records databases.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Web App</span>
+                            <span class="tech-tag">AI Chatbot</span>
+                            <span class="tech-tag">HTML & CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/RoshanKhan72/Smart-AI-Integrated-doctor-appointment-booking-portal" target="_blank" class="project-link" id="link-doctor-demo"><i class="fas fa-external-link-alt"></i> Repo</a>
+                            <a href="https://github.com/RoshanKhan72/Smart-AI-Integrated-doctor-appointment-booking-portal" target="_blank" class="project-link" id="link-doctor-code"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Buffer Manager Library -->
+                <div class="project-card" data-category="web-sys" id="project-buffer-lib">
+                    <div class="project-image project-web-sys">
+                        <div class="project-placeholder">
+                            <i class="fas fa-memory"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-status">Web & Systems</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Buffer Manager Library (PBL)</h3>
+                        <p>
+                            A low-level memory cache manager implemented in C++. Utilizes custom Page Replacement strategies (LRU) to efficiently swap memory frames between hardware RAM and storage disk blocks.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">C++</span>
                             <span class="tech-tag">OOP</span>
                             <span class="tech-tag">Data Structures</span>
-                            <span class="tech-tag">Algorithms</span>
+                            <span class="tech-tag">Cache Systems</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/RoshanKhan72/BufferLibrary_PBL" target="_blank"
-                                class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            <a href="https://github.com/RoshanKhan72/BufferLibrary_PBL" target="_blank"
-                                class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/RoshanKhan72/BufferLibrary_PBL" target="_blank" class="project-link" id="link-buffer-demo"><i class="fas fa-external-link-alt"></i> Repo</a>
+                            <a href="https://github.com/RoshanKhan72/BufferLibrary_PBL" target="_blank" class="project-link" id="link-buffer-code"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
+                <!-- Project 7: Rise India -->
+                <div class="project-card" data-category="web-sys" id="project-rise-india">
+                    <div class="project-image project-web-sys">
                         <div class="project-placeholder">
-                            <i class="fas fa-code"></i>
+                            <i class="fas fa-flag"></i>
                         </div>
                         <div class="project-overlay">
-                            <span class="project-status">JavaScript</span>
+                            <span class="project-status">Web & Systems</span>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>First Repository</h3>
+                        <h3>Rise India</h3>
                         <p>
-                            Initial GitHub repository showcasing fundamental programming concepts and early development
-                            work in software engineering.
+                            A promotional web application showing modular templates and high-quality frontend styling. Built to highlight socio-economic growth and community initiatives.
                         </p>
                         <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
                             <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">Git</span>
+                            <span class="tech-tag">Web Design</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/RoshanKhan72/firstREPO" target="_blank" class="project-link"><i
-                                    class="fas fa-external-link-alt"></i> Demo</a>
-                            <a href="https://github.com/RoshanKhan72/firstREPO" target="_blank" class="project-link"><i
-                                    class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/RoshanKhan72/Rise-India" target="_blank" class="project-link" id="link-rise-demo"><i class="fas fa-external-link-alt"></i> Repo</a>
+                            <a href="https://github.com/RoshanKhan72/Rise-India" target="_blank" class="project-link" id="link-rise-code"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>

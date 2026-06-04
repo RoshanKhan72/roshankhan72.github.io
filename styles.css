@@ -556,6 +556,53 @@ section {
   transform: translateY(-2px);
 }
 
+/* Projects Filter Bar */
+.projects-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.8s ease;
+}
+
+.filter-btn {
+  padding: 0.6rem 1.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: var(--gradient-primary);
+  color: white;
+  border-color: transparent;
+  box-shadow: var(--shadow-md);
+}
+
+/* Category-specific project image gradients */
+.project-image.project-ai-ml {
+  background: linear-gradient(135deg, #667eea 0%, #4facfe 100%);
+}
+
+.project-image.project-android-sec {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.project-image.project-web-sys {
+  background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);
+}
+
 /* Projects Section */
 .projects {
   background: var(--bg-secondary);
@@ -565,6 +612,7 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
+  transition: all 0.5s ease;
 }
 
 .project-card {
@@ -572,12 +620,29 @@ section {
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--shadow-md);
-  transition: var(--transition);
   cursor: pointer;
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.3s ease;
+}
+
+.project-card.hidden {
+  opacity: 0 !important;
+  transform: scale(0.8) translateY(30px) !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.02);
   box-shadow: var(--shadow-xl);
 }
 
