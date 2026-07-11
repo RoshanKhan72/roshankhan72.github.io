@@ -1,561 +1,792 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roshan Khan Portfolio - Software Developer & ML Enthusiast</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roshan Khan Portfolio - Software Developer & AI/ML Enthusiast</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description"
-        content="Mohammad Roshan Soudagar - Iam a B.Tech in Information Science & Engineering student specializing in software development, machine learning, and data technologies. Explore my projects and skills.">
-    <meta name="keywords"
-        content="Roshan Khan, Mohammad Roshan Soudagar, software developer, machine learning, portfolio, B.Tech, Information Science, Python, Java, C++, Android development, web development, data mining">
-    <meta name="author" content="Mohammad Roshan Soudagar">
-    <meta name="robots" content="index, follow">
+    <meta
+      name="description"
+      content="Mohammad Roshan Soudagar - Iam a B.Tech in Information Science & Engineering student specializing in software development, machine learning, and data technologies. Explore my projects and skills."
+    />
+    <meta
+      name="keywords"
+      content="Roshan Khan, Mohammad Roshan Soudagar, software developer, machine learning, portfolio, B.Tech, Information Science, Python, Java, C++, Android development, web development, data mining"
+    />
+    <meta name="author" content="Mohammad Roshan Soudagar" />
+    <meta name="robots" content="index, follow" />
 
     <!-- Open Graph Meta Tags for Social Sharing -->
-    <meta property="og:title" content="Roshan Khan Portfolio - Software Developer & ML Enthusiast">
-    <meta property="og:description"
-        content="B.Tech Information Science Engineering student specializing in software development, machine learning, and data technologies.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://roshankhan72.github.io">
-    <meta property="og:image" content="https://roshankhan72.github.io/assets/og-image.jpg">
-    <meta property="og:site_name" content="Roshan Khan Portfolio">
+    <meta
+      property="og:title"
+      content="Roshan Khan Portfolio - Software Developer & ML Enthusiast"
+    />
+    <meta
+      property="og:description"
+      content="B.Tech Information Science Engineering student specializing in software development, machine learning, and data technologies."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://roshankhan72.github.io" />
+    <meta
+      property="og:image"
+      content="https://roshankhan72.github.io/assets/og-image.jpg"
+    />
+    <meta property="og:site_name" content="Roshan Khan Portfolio" />
 
     <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Roshan Khan Portfolio - Software Developer & ML Enthusiast">
-    <meta name="twitter:description"
-        content="B.Tech Information Science Engineering student specializing in software development, machine learning, and data technologies.">
-    <meta name="twitter:image" content="https://roshankhan72.github.io/assets/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Roshan Khan Portfolio - Software Developer & ML Enthusiast"
+    />
+    <meta
+      name="twitter:description"
+      content="B.Tech Information Science Engineering student specializing in software development, machine learning, and data technologies."
+    />
+    <meta
+      name="twitter:image"
+      content="https://roshankhan72.github.io/assets/og-image.jpg"
+    />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://roshankhan72.github.io">
+    <link rel="canonical" href="https://roshankhan72.github.io" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>"
+    />
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Roshan</a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#education" class="nav-link">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle">
-                    <i class="fas fa-moon" id="theme-icon"></i>
-                </button>
-                <div class="nav-toggle" id="mobile-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="#home">Roshan</a>
         </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#education" class="nav-link">Education</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon" id="theme-icon"></i>
+          </button>
+          <div class="nav-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        Hi, I'm <span class="highlight">Mohammad Roshan Soudagar</span>
-                    </h1>
-                    <h2 class="hero-subtitle">
-                        Persuing B.Tech in Information Science and Engineering
-                    </h2>
-                    <p class="hero-tagline">"Aspiring Software Developer & Machine Learning Enthusiast"</p>
-                    <p class="hero-description">
-                        Passionate about building innovative solutions at the intersection of software development and
-                        machine learning.
-                        Currently exploring the fascinating world of data technologies and artificial intelligence.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View Projects</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                    </div>
-                    <div class="hero-social">
-                        <a href="https://github.com/RoshanKhan72" target="_blank" class="social-icon"><i
-                                class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/mohammad-roshan-soudagar" target="_blank"
-                            class="social-icon"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:mohammadroshan72khan@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="profile-card">
-                        <div class="profile-placeholder">
-                            <i class="fas fa-user-graduate"></i>
-                        </div>
-                        <div class="profile-info">
-                            <span class="status-indicator"></span>
-                            <span>Available for work</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              Hi, I'm <span class="highlight">Mohammad Roshan Soudagar</span>
+            </h1>
+            <h2 class="hero-subtitle">
+              Persuing B.Tech in Information Science and Engineering
+            </h2>
+            <p class="hero-tagline">
+              "Aspiring Software Developer & AI/ML Enthusiast"
+            </p>
+            <p class="hero-description">
+              Passionate about building innovative solutions at the intersection
+              of Software development and AI. Currently exploring the
+              fascinating world of data technologies and artificial
+              intelligence.
+            </p>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary">View Projects</a>
+              <a href="#contact" class="btn btn-secondary">Get In Touch</a>
             </div>
+            <div class="hero-social">
+              <a
+                href="https://github.com/RoshanKhan72"
+                target="_blank"
+                class="social-icon"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/mohammad-roshan-soudagar"
+                target="_blank"
+                class="social-icon"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                href="mailto:mohammadroshan72khan@gmail.com"
+                class="social-icon"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="profile-card">
+              <div class="profile-placeholder">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <div class="profile-info">
+                <span class="status-indicator"></span>
+                <span>Available for work</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I am a 3rd-year B.Tech student in Information Science and Engineering at GM University,
-                        Davangere,
-                        with a strong passion for software development and machine learning. My academic journey has
-                        fueled
-                        my curiosity about how technology can solve real-world problems.
-                    </p>
-                    <p>
-                        I am particularly interested in the intersection of artificial intelligence and software
-                        development,
-                        exploring how machine learning algorithms can be integrated into practical applications. From
-                        developing
-                        intelligent systems to working with data mining technologies, I enjoy the challenge of turning
-                        complex
-                        concepts into functional, user-friendly solutions.
-                    </p>
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-code"></i>
-                            <span>Clean Code Enthusiast</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-brain"></i>
-                            <span>ML Explorer</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-database"></i>
-                            <span>Data Driven</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>Mobile Developer</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I am a 3rd-year B.Tech student in Information Science and
+              Engineering at GM University, Davangere, with a strong passion for
+              Software development and Machine learning. My academic journey has
+              fueled my curiosity about how technology can solve real world
+              problems.
+            </p>
+            <p>
+              I am particularly interested in the intersection of Artificial
+              Intelligence and Software development, exploring how Machine
+              learning algorithms can be integrated into practical applications.
+              From developing intelligent systems to working with data
+              technologies, I enjoy the challenge of turning complex concepts
+              into functional, user-friendly solutions.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-code"></i>
+                <span>Clean Code Enthusiast</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-brain"></i>
+                <span>ML Explorer</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-database"></i>
+                <span>Data Driven</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Mobile Developer</span>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-code"></i>
-                        <h3>Programming</h3>
-                    </div>
-                    <div class="skill-list">
-                        <div class="skill-item clickable-skill" data-skill="C">
-                            <div class="skill-info">
-                                <span class="skill-name">C</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item clickable-skill" data-skill="Java">
-                            <div class="skill-info">
-                                <span class="skill-name">Java</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item clickable-skill" data-skill="Python">
-                            <div class="skill-info">
-                                <span class="skill-name">Python</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="88%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3>Technologies</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="tech-tag clickable-tech" data-tech="Machine Learning">Machine Learning</span>
-                        <span class="tech-tag clickable-tech" data-tech="Data Mining">Data Mining</span>
-                        <span class="tech-tag clickable-tech" data-tech="DBMS">DBMS</span>
-                        <span class="tech-tag clickable-tech" data-tech="Android Development">Android Development</span>
-                        <span class="tech-tag clickable-tech" data-tech="Data Structures">Data Structures</span>
-                        <span class="tech-tag clickable-tech" data-tech="Algorithms">Algorithms</span>
-                        <span class="tech-tag clickable-tech" data-tech="OOP Concepts">OOP Concepts</span>
-                        <span class="tech-tag clickable-tech" data-tech="Web Development">Web Development</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-tools"></i>
-                        <h3>Tools</h3>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="tech-tag clickable-tech" data-tech="Git">Git</span>
-                        <span class="tech-tag clickable-tech" data-tech="Android Studio">Android Studio</span>
-                        <span class="tech-tag clickable-tech" data-tech="VS Code">VS Code</span>
-                        <span class="tech-tag clickable-tech" data-tech="Jupyter Notebook">Jupyter Notebook</span>
-                        <span class="tech-tag clickable-tech" data-tech="MySQL">MySQL</span>
-                        <span class="tech-tag clickable-tech" data-tech="TensorFlow">TensorFlow</span>
-                        <span class="tech-tag clickable-tech" data-tech="Scikit-learn">Scikit-learn</span>
-                        <span class="tech-tag clickable-tech" data-tech="Postman">Postman</span>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <div class="skill-header">
+              <i class="fas fa-code"></i>
+              <h3>Programming</h3>
             </div>
+            <div class="skill-list">
+              <div class="skill-item clickable-skill" data-skill="C">
+                <div class="skill-info">
+                  <span class="skill-name">C</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="85%"></div>
+                </div>
+              </div>
+              <div class="skill-item clickable-skill" data-skill="Java">
+                <div class="skill-info">
+                  <span class="skill-name">Java</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="80%"></div>
+                </div>
+              </div>
+              <div class="skill-item clickable-skill" data-skill="Python">
+                <div class="skill-info">
+                  <span class="skill-name">Python</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-width="88%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-header">
+              <i class="fas fa-laptop-code"></i>
+              <h3>Technologies</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tech-tag clickable-tech" data-tech="Machine Learning"
+                >Machine Learning</span
+              >
+              <span class="tech-tag clickable-tech" data-tech="Data Mining"
+                >Data Mining</span
+              >
+              <span class="tech-tag clickable-tech" data-tech="DBMS">DBMS</span>
+              <span
+                class="tech-tag clickable-tech"
+                data-tech="Android Development"
+                >Android Development</span
+              >
+              <span class="tech-tag clickable-tech" data-tech="Data Structures"
+                >Data Structures</span
+              >
+              <span class="tech-tag clickable-tech" data-tech="Algorithms"
+                >Algorithms</span
+              >
+              <span class="tech-tag clickable-tech" data-tech="OOP Concepts"
+                >OOP Concepts</span
+              >
+              <span class="tech-tag clickable-tech" data-tech="Web Development"
+                >Web Development</span
+              >
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-header">
+              <i class="fas fa-tools"></i>
+              <h3>Tools</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tech-tag clickable-tech" data-tech="Git">Git</span>
+              <span class="tech-tag clickable-tech" data-tech="GitHub"
+                >Git Hub</span
+              >
+              <span class="tech-tag clickable-tech" data-tech="Android Studio"
+                >Android Studio</span
+              >
+              <span class="tech-tag clickable-tech" data-tech="VS Code"
+                >VS Code</span
+              >
+              <span class="tech-tag clickable-tech" data-tech="Jupyter Notebook"
+                >Jupyter Notebook</span
+              >
+              <span class="tech-tag clickable-tech" data-tech="MySQL"
+                >MySQL</span
+              >
+              <span class="tech-tag clickable-tech" data-tech="TensorFlow"
+                >TensorFlow</span
+              >
+              <span class="tech-tag clickable-tech" data-tech="AI Tools"
+                >AI Tools</span
+              >
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            
-            <!-- Category Filters -->
-            <div class="projects-filter" id="projects-filter-bar">
-                <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
-                <button class="filter-btn" data-filter="ai-ml" id="filter-ai-ml">AI & Machine Learning</button>
-                <button class="filter-btn" data-filter="android-sec" id="filter-android-sec">Android & Security</button>
-                <button class="filter-btn" data-filter="web-sys" id="filter-web-sys">Web & Systems</button>
-            </div>
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
 
-            <div class="projects-grid" id="projects-grid">
-                <!-- Project 1: Smart Specs Integrated with ML for Blinds -->
-                <div class="project-card" data-category="ai-ml" id="project-smart-specs">
-                    <div class="project-image project-ai-ml">
-                        <div class="project-placeholder">
-                            <i class="fas fa-eye-slash"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <span class="project-status">AI & ML</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Smart Specs with ML for Blinds</h3>
-                        <p>
-                            Assistive technology designed for visually impaired individuals, utilizing real-time computer vision and object detection models (YOLO) to recognize objects and provide spoken feedback.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">YOLO</span>
-                            <span class="tech-tag">Computer Vision</span>
-                            <span class="tech-tag">TensorFlow</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/RoshanKhan72/Object-detection-for-visually-Impaired" target="_blank" class="project-link" id="link-specs-demo"><i class="fas fa-external-link-alt"></i> Repo</a>
-                            <a href="https://github.com/RoshanKhan72/Object-detection-for-visually-Impaired" target="_blank" class="project-link" id="link-specs-code"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2: Smart Placement Advisor -->
-                <div class="project-card" data-category="ai-ml" id="project-placement-advisor">
-                    <div class="project-image project-ai-ml">
-                        <div class="project-placeholder">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <span class="project-status">AI & ML</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Smart Placement Advisor</h3>
-                        <p>
-                            A predictive data science system that evaluates students' academic records, predicts hiring outcomes, and recommends targeted preparation courses based on historical placement data.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Machine Learning</span>
-                            <span class="tech-tag">Predictive Modeling</span>
-                            <span class="tech-tag">Scikit-learn</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/RoshanKhan72/Smart-Placement-Advisor" target="_blank" class="project-link" id="link-placement-demo"><i class="fas fa-external-link-alt"></i> Repo</a>
-                            <a href="https://github.com/RoshanKhan72/Smart-Placement-Advisor" target="_blank" class="project-link" id="link-placement-code"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3: Fake News Detection -->
-                <div class="project-card" data-category="ai-ml" id="project-fake-news">
-                    <div class="project-image project-ai-ml">
-                        <div class="project-placeholder">
-                            <i class="fas fa-newspaper"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <span class="project-status">AI & ML</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Fake News Detection</h3>
-                        <p>
-                            An NLP application built to analyze news articles and classify them as genuine or fake using text classification, vectorization algorithms, and machine learning models.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">NLP</span>
-                            <span class="tech-tag">Text Mining</span>
-                            <span class="tech-tag">Scikit-learn</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/RoshanKhan72" target="_blank" class="project-link" id="link-news-demo"><i class="fas fa-external-link-alt"></i> Profile</a>
-                            <a href="https://github.com/RoshanKhan72" target="_blank" class="project-link" id="link-news-code"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4: PrivyPing -->
-                <div class="project-card" data-category="android-sec" id="project-privyping">
-                    <div class="project-image project-android-sec">
-                        <div class="project-placeholder">
-                            <i class="fas fa-user-shield"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <span class="project-status">Android & Security</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>PrivyPing</h3>
-                        <p>
-                            A collaborative security application that analyzes notifications and processes multimedia files (photos and videos) using advanced deep learning to verify if content is authentic or AI-manipulated.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Kotlin</span>
-                            <span class="tech-tag">Android SDK</span>
-                            <span class="tech-tag">Deepfake Detection</span>
-                            <span class="tech-tag">Security</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/RoshanKhan72/PrivyPing" target="_blank" class="project-link" id="link-privyping-demo"><i class="fas fa-external-link-alt"></i> Repo</a>
-                            <a href="https://github.com/RoshanKhan72/PrivyPing" target="_blank" class="project-link" id="link-privyping-code"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5: AI-Integrated Doctor Appointment Booking Portal -->
-                <div class="project-card" data-category="web-sys" id="project-doctor-portal">
-                    <div class="project-image project-web-sys">
-                        <div class="project-placeholder">
-                            <i class="fas fa-laptop-medical"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <span class="project-status">Web & Systems</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Smart AI Doctor Booking Portal</h3>
-                        <p>
-                            An AI-powered clinic management system featuring patient symptom analysis, doctor schedules, secure appointment booking, and patient records databases.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Web App</span>
-                            <span class="tech-tag">AI Chatbot</span>
-                            <span class="tech-tag">HTML & CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/RoshanKhan72/Smart-AI-Integrated-doctor-appointment-booking-portal" target="_blank" class="project-link" id="link-doctor-demo"><i class="fas fa-external-link-alt"></i> Repo</a>
-                            <a href="https://github.com/RoshanKhan72/Smart-AI-Integrated-doctor-appointment-booking-portal" target="_blank" class="project-link" id="link-doctor-code"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6: Buffer Manager Library -->
-                <div class="project-card" data-category="web-sys" id="project-buffer-lib">
-                    <div class="project-image project-web-sys">
-                        <div class="project-placeholder">
-                            <i class="fas fa-memory"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <span class="project-status">Web & Systems</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Buffer Manager Library (PBL)</h3>
-                        <p>
-                            A low-level memory cache manager implemented in C++. Utilizes custom Page Replacement strategies (LRU) to efficiently swap memory frames between hardware RAM and storage disk blocks.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">OOP</span>
-                            <span class="tech-tag">Data Structures</span>
-                            <span class="tech-tag">Cache Systems</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/RoshanKhan72/BufferLibrary_PBL" target="_blank" class="project-link" id="link-buffer-demo"><i class="fas fa-external-link-alt"></i> Repo</a>
-                            <a href="https://github.com/RoshanKhan72/BufferLibrary_PBL" target="_blank" class="project-link" id="link-buffer-code"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Category Filters -->
+        <div class="projects-filter" id="projects-filter-bar">
+          <button class="filter-btn active" data-filter="all" id="filter-all">
+            All
+          </button>
+          <button class="filter-btn" data-filter="ai-ml" id="filter-ai-ml">
+            AI & Machine Learning
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="android-sec"
+            id="filter-android-sec"
+          >
+            Android & Security
+          </button>
+          <button class="filter-btn" data-filter="web-sys" id="filter-web-sys">
+            Web & Systems
+          </button>
         </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project 1: Smart Specs Integrated with ML for Blinds -->
+          <div
+            class="project-card"
+            data-category="ai-ml"
+            id="project-smart-specs"
+          >
+            <div class="project-image project-ai-ml">
+              <div class="project-placeholder">
+                <i class="fas fa-eye-slash"></i>
+              </div>
+              <div class="project-overlay">
+                <span class="project-status">AI & ML</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Smart Specs with ML for Blinds</h3>
+              <p>
+                Assistive technology designed for visually impaired individuals,
+                utilizing real-time computer vision and object detection models
+                (YOLO) to recognize objects and provide spoken feedback.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">YOLO</span>
+                <span class="tech-tag">Computer Vision</span>
+                <span class="tech-tag">TensorFlow</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/RoshanKhan72/Object-detection-for-visually-Impaired"
+                  target="_blank"
+                  class="project-link"
+                  id="link-specs-demo"
+                  ><i class="fas fa-external-link-alt"></i> Repo</a
+                >
+                <a
+                  href="https://github.com/RoshanKhan72/Object-detection-for-visually-Impaired"
+                  target="_blank"
+                  class="project-link"
+                  id="link-specs-code"
+                  ><i class="fab fa-github"></i> Code</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Smart Placement Advisor -->
+          <div
+            class="project-card"
+            data-category="ai-ml"
+            id="project-placement-advisor"
+          >
+            <div class="project-image project-ai-ml">
+              <div class="project-placeholder">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <div class="project-overlay">
+                <span class="project-status">AI & ML</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Smart Placement Advisor</h3>
+              <p>
+                A predictive data science system that evaluates students'
+                academic records, predicts hiring outcomes, and recommends
+                targeted preparation courses based on historical placement data.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">Predictive Modeling</span>
+                <span class="tech-tag">Scikit-learn</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/RoshanKhan72/Smart-Placement-Advisor"
+                  target="_blank"
+                  class="project-link"
+                  id="link-placement-demo"
+                  ><i class="fas fa-external-link-alt"></i> Repo</a
+                >
+                <a
+                  href="https://github.com/RoshanKhan72/Smart-Placement-Advisor"
+                  target="_blank"
+                  class="project-link"
+                  id="link-placement-code"
+                  ><i class="fab fa-github"></i> Code</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Fake News Detection -->
+          <div
+            class="project-card"
+            data-category="ai-ml"
+            id="project-fake-news"
+          >
+            <div class="project-image project-ai-ml">
+              <div class="project-placeholder">
+                <i class="fas fa-newspaper"></i>
+              </div>
+              <div class="project-overlay">
+                <span class="project-status">AI & ML</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Fake News Detection</h3>
+              <p>
+                An NLP application built to analyze news articles and classify
+                them as genuine or fake using text classification, vectorization
+                algorithms, and machine learning models.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">Text Mining</span>
+                <span class="tech-tag">Scikit-learn</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/RoshanKhan72"
+                  target="_blank"
+                  class="project-link"
+                  id="link-news-demo"
+                  ><i class="fas fa-external-link-alt"></i> Profile</a
+                >
+                <a
+                  href="https://github.com/RoshanKhan72"
+                  target="_blank"
+                  class="project-link"
+                  id="link-news-code"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: PrivyPing -->
+          <div
+            class="project-card"
+            data-category="android-sec"
+            id="project-privyping"
+          >
+            <div class="project-image project-android-sec">
+              <div class="project-placeholder">
+                <i class="fas fa-user-shield"></i>
+              </div>
+              <div class="project-overlay">
+                <span class="project-status">Android & Security</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>PrivyPing</h3>
+              <p>
+                A collaborative security application that analyzes notifications
+                and processes multimedia files (photos and videos) using
+                advanced deep learning to verify if content is authentic or
+                AI-manipulated.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Kotlin</span>
+                <span class="tech-tag">Android SDK</span>
+                <span class="tech-tag">Deepfake Detection</span>
+                <span class="tech-tag">Security</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/RoshanKhan72/PrivyPing"
+                  target="_blank"
+                  class="project-link"
+                  id="link-privyping-demo"
+                  ><i class="fas fa-external-link-alt"></i> Repo</a
+                >
+                <a
+                  href="https://github.com/RoshanKhan72/PrivyPing"
+                  target="_blank"
+                  class="project-link"
+                  id="link-privyping-code"
+                  ><i class="fab fa-github"></i> Code</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: AI-Integrated Doctor Appointment Booking Portal -->
+          <div
+            class="project-card"
+            data-category="web-sys"
+            id="project-doctor-portal"
+          >
+            <div class="project-image project-web-sys">
+              <div class="project-placeholder">
+                <i class="fas fa-laptop-medical"></i>
+              </div>
+              <div class="project-overlay">
+                <span class="project-status">Web & Systems</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Smart AI Doctor Booking Portal</h3>
+              <p>
+                An AI-powered clinic management system featuring patient symptom
+                analysis, doctor schedules, secure appointment booking, and
+                patient records databases.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Web App</span>
+                <span class="tech-tag">AI Chatbot</span>
+                <span class="tech-tag">HTML & CSS</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/RoshanKhan72/Smart-AI-Integrated-doctor-appointment-booking-portal"
+                  target="_blank"
+                  class="project-link"
+                  id="link-doctor-demo"
+                  ><i class="fas fa-external-link-alt"></i> Repo</a
+                >
+                <a
+                  href="https://github.com/RoshanKhan72/Smart-AI-Integrated-doctor-appointment-booking-portal"
+                  target="_blank"
+                  class="project-link"
+                  id="link-doctor-code"
+                  ><i class="fab fa-github"></i> Code</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Buffer Manager Library -->
+          <div
+            class="project-card"
+            data-category="web-sys"
+            id="project-buffer-lib"
+          >
+            <div class="project-image project-web-sys">
+              <div class="project-placeholder">
+                <i class="fas fa-memory"></i>
+              </div>
+              <div class="project-overlay">
+                <span class="project-status">Web & Systems</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Buffer Manager Library (PBL)</h3>
+              <p>
+                A low-level memory cache manager implemented in C++. Utilizes
+                custom Page Replacement strategies (LRU) to efficiently swap
+                memory frames between hardware RAM and storage disk blocks.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">OOP</span>
+                <span class="tech-tag">Data Structures</span>
+                <span class="tech-tag">Cache Systems</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/RoshanKhan72/BufferLibrary_PBL"
+                  target="_blank"
+                  class="project-link"
+                  id="link-buffer-demo"
+                  ><i class="fas fa-external-link-alt"></i> Repo</a
+                >
+                <a
+                  href="https://github.com/RoshanKhan72/BufferLibrary_PBL"
+                  target="_blank"
+                  class="project-link"
+                  id="link-buffer-code"
+                  ><i class="fab fa-github"></i> Code</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Education Section -->
     <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-content">
-                <div class="education-card">
-                    <div class="education-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="education-details">
-                        <h3>B.Tech in Information Science and Engineering</h3>
-                        <div class="education-info">
-                            <span class="institution">GM University, Davangere</span>
-                            <span class="duration">2023 - 2027 (Persuing)</span>
-                        </div>
-                        <div class="education-description">
-                            <p>
-                                Currently pursuing Bachelor of Technology with focus on Information Science and
-                                Engineering.
-                                Core subjects include Python, Java, Data Structures & Algorithms, Database Management Systems, Machine
-                                Learning, Cloud Computing, DevOps, Big Data Analytics and Software Engineering.
-                            </p>
-                        </div>
-                        
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="education-content">
+          <div class="education-card">
+            <div class="education-icon">
+              <i class="fas fa-university"></i>
             </div>
+            <div class="education-details">
+              <h3>B.Tech in Information Science and Engineering</h3>
+              <div class="education-info">
+                <span class="institution">GM University, Davangere</span>
+                <span class="duration">2023 - 2027 (Persuing)</span>
+              </div>
+              <div class="education-description">
+                <p>
+                  Currently pursuing Bachelor of Technology with focus on
+                  Information Science and Engineering. Core subjects include
+                  Python, Java, Data Structures & Algorithms, Database
+                  Management Systems, Machine Learning, Cloud Computing, DevOps,
+                  Big Data Analytics and Software Engineering.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>
-                        I'm always open to discussing new opportunities, interesting projects, or just having a chat
-                        about
-                        technology and machine learning. Feel free to reach out!
-                    </p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div class="contact-info-text">
-                                <span class="contact-label">Email</span>
-                                <a href="mailto:mohammadroshan72khan@gmail.com">mohammadroshan72khan@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <div class="contact-info-text">
-                                <span class="contact-label">LinkedIn</span>
-                                <a href="https://www.linkedin.com/in/mohammad-roshan-soudagar"
-                                    target="_blank">linkedin.com/in/mohammad-roshan-soudagar</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-github"></i>
-                            <div class="contact-info-text">
-                                <span class="contact-label">GitHub</span>
-                                <a href="https://github.com/RoshanKhan72" target="_blank">github.com/RoshanKhan72</a>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Let's Connect</h3>
+            <p>
+              I'm always open to discussing new opportunities, interesting
+              projects, or just having a chat about technology and machine
+              learning. Feel free to reach out!
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div class="contact-info-text">
+                  <span class="contact-label">Email</span>
+                  <a href="mailto:mohammadroshan72khan@gmail.com"
+                    >mohammadroshan72khan@gmail.com</a
+                  >
                 </div>
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i>
-                        Send Message
-                    </button>
-                </form>
+              </div>
+              <div class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <div class="contact-info-text">
+                  <span class="contact-label">LinkedIn</span>
+                  <a
+                    href="https://www.linkedin.com/in/mohammad-roshan-soudagar"
+                    target="_blank"
+                    >linkedin.com/in/mohammad-roshan-soudagar</a
+                  >
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fab fa-github"></i>
+                <div class="contact-info-text">
+                  <span class="contact-label">GitHub</span>
+                  <a href="https://github.com/RoshanKhan72" target="_blank"
+                    >github.com/RoshanKhan72</a
+                  >
+                </div>
+              </div>
             </div>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Subject"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i>
+              Send Message
+            </button>
+          </form>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2026 Mohammad Roshan Soudagar. All rights reserved.</p>
-                <div class="footer-social">
-                    <a href="https://github.com/RoshanKhan72" target="_blank" class="social-icon"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/mohammad-roshan-soudagar" target="_blank"
-                        class="social-icon"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:mohammadroshan72khan@gmail.com" class="social-icon"><i
-                            class="fas fa-envelope"></i></a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2026 Mohammad Roshan Soudagar. All rights reserved.</p>
+          <div class="footer-social">
+            <a
+              href="https://github.com/RoshanKhan72"
+              target="_blank"
+              class="social-icon"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/mohammad-roshan-soudagar"
+              target="_blank"
+              class="social-icon"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="mailto:mohammadroshan72khan@gmail.com" class="social-icon"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
         </div>
+      </div>
     </footer>
 
     <!-- Skill Info Modal -->
     <div id="skillModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 id="modalTitle">Skill Information</h2>
-            <div id="modalContent">
-                <!-- Content will be dynamically inserted here -->
-            </div>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle">Skill Information</h2>
+        <div id="modalContent">
+          <!-- Content will be dynamically inserted here -->
         </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
