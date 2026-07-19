@@ -133,10 +133,6 @@ Portfolio/
 - B.Tech in Information Science and Engineering
 - GM University, Davangere (2023-2027)
 
-### 🏆 **Certifications**
-- Award/credential cards (Supervised Machine Learning, Java, Android App Dev)
-- Fully interactive secure **Admin Panel** to manage, add, edit, or delete certificates directly on the live website and export updated code.
-
 ### 📞 **Contact**
 - Email: mohammadroshan72khan@gmail.com
 - LinkedIn: https://www.linkedin.com/in/mohammad-roshan-soudagar

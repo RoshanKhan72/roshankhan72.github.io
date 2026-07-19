@@ -94,9 +94,6 @@
             <a href="#education" class="nav-link">Education</a>
           </li>
           <li class="nav-item">
-            <a href="#certifications" class="nav-link">Certifications</a>
-          </li>
-          <li class="nav-item">
             <a href="#contact" class="nav-link">Contact</a>
           </li>
         </ul>
@@ -684,43 +681,6 @@
       </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications">
-      <div class="container">
-        <div class="certifications-header">
-          <h2 class="section-title">Certifications</h2>
-          <button class="btn btn-secondary admin-btn" id="admin-login-btn">
-            <i class="fas fa-lock"></i> Manage
-          </button>
-        </div>
-        
-        <!-- Admin Dashboard Panel (Hidden by default) -->
-        <div class="admin-panel hidden" id="admin-panel">
-          <div class="admin-controls">
-            <h3><i class="fas fa-user-shield"></i> Admin Dashboard</h3>
-            <div class="admin-actions">
-              <button class="btn btn-primary" id="add-cert-btn">
-                <i class="fas fa-plus"></i> Add Certificate
-              </button>
-              <button class="btn btn-secondary" id="change-pass-btn">
-                <i class="fas fa-key"></i> Change Password
-              </button>
-              <button class="btn btn-secondary" id="export-code-btn">
-                <i class="fas fa-download"></i> Export script.js
-              </button>
-              <button class="btn btn-danger" id="admin-logout-btn">
-                <i class="fas fa-sign-out-alt"></i> Logout
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="certifications-grid" id="certifications-grid">
-          <!-- Certifications will be rendered dynamically by JS -->
-        </div>
-      </div>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact" class="contact">
       <div class="container">
@@ -852,78 +812,6 @@
       </div>
     </div>
 
-    <!-- Add/Edit Certificate Modal -->
-    <div id="certFormModal" class="modal">
-      <div class="modal-content">
-        <span class="close" id="close-cert-form">&times;</span>
-        <h2 id="certFormTitle">Add New Certificate</h2>
-        <form id="cert-form">
-          <input type="hidden" id="edit-cert-index" value="" />
-          <div class="form-group">
-            <label for="cert-title">Certificate Title</label>
-            <input type="text" id="cert-title" required placeholder="e.g., Python Data Science" />
-          </div>
-          <div class="form-group">
-            <label for="cert-issuer">Issuing Organization</label>
-            <input type="text" id="cert-issuer" required placeholder="e.g., IBM / Coursera" />
-          </div>
-          <div class="form-group">
-            <label for="cert-date">Date of Issue</label>
-            <input type="text" id="cert-date" required placeholder="e.g., July 2026" />
-          </div>
-          <div class="form-group">
-            <label for="cert-link">Verification Link (Optional)</label>
-            <input type="url" id="cert-link" placeholder="https://coursera.org/verify/..." />
-          </div>
-          <div class="form-group">
-            <label for="cert-file">Certificate Image/PDF Upload</label>
-            <input type="file" id="cert-file" accept="image/*,application/pdf" />
-            <small class="form-hint">Will be encoded and saved locally.</small>
-          </div>
-          <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">
-            <i class="fas fa-save"></i> Save Certificate
-          </button>
-        </form>
-      </div>
-    </div>
-    
-    <!-- Admin Login Password Modal -->
-    <div id="adminLoginModal" class="modal">
-      <div class="modal-content">
-        <span class="close" id="close-login-modal">&times;</span>
-        <h2>Admin Authentication</h2>
-        <form id="login-form">
-          <div class="form-group">
-            <label for="admin-password">Enter Password</label>
-            <input type="password" id="admin-password" required placeholder="Enter password" />
-          </div>
-          <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">
-            <i class="fas fa-sign-in-alt"></i> Login
-          </button>
-        </form>
-      </div>
-    </div>
-
-    <!-- Change Password Modal -->
-    <div id="changePassModal" class="modal">
-      <div class="modal-content">
-        <span class="close" id="close-change-pass">&times;</span>
-        <h2>Change Admin Password</h2>
-        <form id="change-pass-form">
-          <div class="form-group">
-            <label for="new-password">New Password</label>
-            <input type="password" id="new-password" required placeholder="Enter new password" />
-          </div>
-          <div class="form-group">
-            <label for="confirm-password">Confirm Password</label>
-            <input type="password" id="confirm-password" required placeholder="Confirm new password" />
-          </div>
-          <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">
-            <i class="fas fa-key"></i> Save Password
-          </button>
-        </form>
-      </div>
-    </div>
 
     <script src="script.js"></script>
   </body>
