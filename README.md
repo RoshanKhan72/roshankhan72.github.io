@@ -116,15 +116,18 @@ Portfolio/
 - Professional summary
 
 ### 💻 **Skills & Technologies**
-- **Programming**: C, Java, Python with progress bars
+- **Programming**: C, Java, Python, JavaScript
 - **Technologies**: ML, Data Mining, DBMS, Android Development
 - **Tools**: Git, Android Studio, VS Code
 
 ### 🚀 **Featured Projects**
-1. **Smart Specs Integrated with ML for Blinds** - ML project for visually impaired
-2. **Fake News Detection** - Text classification with NLP
-3. **Buffer Manager Library** - C++ OOP implementation
-4. **Privy Ping** - Team project with multimedia analysis
+1. **AI Study Notes Generator** - Full-stack note organizer utilizing Google Gemini AI (Angular & Node.js)
+2. **Smart Specs Integrated with ML for Blinds** - Assistive technology utilizing real-time computer vision (Python & YOLO)
+3. **Smart Placement Advisor** - Predictive data science system for student hiring predictions (Python & ML)
+4. **Scheme-Mate** - Interactive web application for scheme-related workflows (Dart & JavaScript)
+5. **PrivyPing** - Collaborative security application for deepfake detection (Kotlin & Android)
+6. **Smart AI Doctor Booking Portal** - AI-powered clinic management system with symptom analysis (JavaScript & AI Chatbot)
+7. **Buffer Manager Library (PBL)** - Low-level memory cache manager using page replacement strategies (C++)
 
 ### 🎓 **Education**
 - B.Tech in Information Science and Engineering

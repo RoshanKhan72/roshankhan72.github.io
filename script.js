@@ -109,10 +109,11 @@ function handleContactForm() {
         e.preventDefault();
         
         const formData = new FormData(contactForm);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const subject = formData.get('subject');
-        const message = formData.get('message');
+        const name = formData.get('name')?.toString().trim();
+        const email = formData.get('email')?.toString().trim();
+        const subject = formData.get('subject')?.toString().trim();
+        const message = formData.get('message')?.toString().trim();
+        const recipientEmail = contactForm.getAttribute('data-email') || 'mohammadroshan72khan@gmail.com';
 
         // Basic validation
         if (!name || !email || !subject || !message) {
@@ -125,8 +126,10 @@ function handleContactForm() {
             return;
         }
 
-        // Simulate form submission
-        showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+        const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(`Portfolio Contact: ${subject}`)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+
+        window.location.href = mailtoLink;
+        showNotification('Your email app should open with your message ready to send. If it does not, please email me directly at mohammadroshan72khan@gmail.com.', 'success');
         contactForm.reset();
     });
 }
@@ -550,6 +553,31 @@ const skillInfo = {
             </ul>
         `
     },
+    'JavaScript': {
+        title: 'JavaScript Programming Language',
+        description: 'A versatile, high-level, interpreted scripting language that is a core technology of the World Wide Web.',
+        details: `
+            <h3>What is JavaScript?</h3>
+            <p>JavaScript is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive.</p>
+            
+            <h3>My Experience</h3>
+            <p>I use JavaScript extensively in full-stack and front-end development, including:</p>
+            <ul>
+                <li>Developing interactive and dynamic web interfaces</li>
+                <li>Full-stack development with Node.js and Express</li>
+                <li>Working with modern frontend tools and web technologies</li>
+                <li>Building client-side logic and API integrations</li>
+            </ul>
+            
+            <h3>Applications</h3>
+            <p>Applied JavaScript in projects such as:</p>
+            <ul>
+                <li>AI Study Notes Generator (backend and interactive cards)</li>
+                <li>Smart AI Doctor Booking Portal</li>
+                <li>Dynamic portfolio interactions</li>
+            </ul>
+        `
+    },
     // Technologies
     'Machine Learning': {
         title: 'Machine Learning',
@@ -783,6 +811,58 @@ const skillInfo = {
                 <li>Open source contributions</li>
                 <li>Version control best practices</li>
                 <li>Continuous integration workflows</li>
+            </ul>
+        `
+    },
+    'GitHub': {
+        title: 'GitHub Platform',
+        description: 'A cloud-based platform for hosting, sharing, and collaborating on code repositories.',
+        details: `
+            <h3>GitHub</h3>
+            <p>GitHub is a widely used platform for version control, collaboration, and project sharing in software development.</p>
+            
+            <h3>My Usage</h3>
+            <p>I use GitHub for:</p>
+            <ul>
+                <li>Hosting personal and academic projects</li>
+                <li>Tracking issues and project progress</li>
+                <li>Collaborating with teammates</li>
+                <li>Showcasing repositories and portfolios</li>
+            </ul>
+            
+            <h3>Workflow</h3>
+            <p>Common workflows include:</p>
+            <ul>
+                <li>Pull requests and code review</li>
+                <li>Branch-based development</li>
+                <li>Repository documentation</li>
+                <li>Deployment and project visibility</li>
+            </ul>
+        `
+    },
+    'AI Tools': {
+        title: 'AI Tools',
+        description: 'Modern AI-powered tools used for productivity, automation, coding assistance, and experimentation.',
+        details: `
+            <h3>AI Tools</h3>
+            <p>AI tools help speed up development, improve productivity, and support idea generation across technical workflows.</p>
+            
+            <h3>How I Use Them</h3>
+            <p>I leverage AI tools for:</p>
+            <ul>
+                <li>Code generation and debugging support</li>
+                <li>Learning new concepts faster</li>
+                <li>Writing and refining documentation</li>
+                <li>Exploring AI-driven solutions and ideas</li>
+            </ul>
+            
+            <h3>Benefits</h3>
+            <p>They are especially helpful for:</p>
+            <ul>
+                <li>Rapid prototyping</li>
+                <li>Productivity enhancement</li>
+                <li>Creative problem solving</li>
+                <li>Experimenting with intelligent workflows</li>
             </ul>
         `
     },
