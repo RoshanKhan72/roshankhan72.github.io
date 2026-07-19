@@ -1113,29 +1113,20 @@ console.log('%c👋 Welcome to Roshan\'s Portfolio!', 'font-size: 20px; font-wei
 console.log('%cBuilt with passion and modern web technologies', 'font-size: 14px; color: #764ba2;');
 
 // Certificates Database and Management
-let certificates = [
-    {
-        "title": "Supervised Machine Learning: Regression and Classification",
-        "issuer": "DeepLearning.AI / Coursera",
-        "date": "May 2024",
-        "link": "https://coursera.org/verify/example",
-        "fileData": ""
-    },
-    {
-        "title": "Java Programming Masterclass",
-        "issuer": "Udemy",
-        "date": "March 2025",
-        "link": "https://www.udemy.com/certificate/example",
-        "fileData": ""
-    },
-    {
-        "title": "Android Application Development Certification",
-        "issuer": "Google Developers",
-        "date": "December 2025",
-        "link": "https://developers.google.com/profile/example",
-        "fileData": ""
-    }
-];
+// Admin Configuration
+let adminPassword = "roshanadmin123"; // Change this to your preferred admin password
+
+// Certificates Database and Management
+let certificates = [];
+
+function getAdminPassword() {
+    const savedPassword = localStorage.getItem('portfolio_admin_password');
+    return savedPassword || adminPassword;
+}
+
+function saveAdminPassword(pass) {
+    localStorage.setItem('portfolio_admin_password', pass);
+}
 
 function getCertificates() {
     const saved = localStorage.getItem('portfolio_certificates');
@@ -1282,8 +1273,14 @@ function exportScriptJS() {
             }));
             const listJSON = JSON.stringify(cleanList, null, 4);
             
-            const regex = /(let\s+certificates\s*=\s*\[)[\s\S]*?(\];)/;
-            const newText = text.replace(regex, `$1\n${listJSON.slice(2, -2)}\n$2`);
+            // Replace certificates list
+            const certRegex = /(let\s+certificates\s*=\s*\[)[\s\S]*?(\];)/;
+            let newText = text.replace(certRegex, `$1\n${listJSON.slice(2, -2)}\n$2`);
+            
+            // Replace adminPassword in the script code
+            const currentPassword = getAdminPassword();
+            const passRegex = /let\s+adminPassword\s*=\s*".*?";/;
+            newText = newText.replace(passRegex, `let adminPassword = "${currentPassword}";`);
             
             const blob = new Blob([newText], { type: 'application/javascript' });
             const url = URL.createObjectURL(blob);
@@ -1334,7 +1331,8 @@ function initCertificates() {
         loginForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const password = document.getElementById('admin-password').value;
-            if (password === 'roshan123') {
+            const correctPassword = getAdminPassword();
+            if (password === correctPassword) {
                 localStorage.setItem('portfolio_admin_logged_in', 'true');
                 showNotification('Logged in successfully as admin!', 'success');
                 adminLoginModal.style.display = 'none';
@@ -1431,6 +1429,45 @@ function initCertificates() {
         });
     }
     
+    // Change Password Actions
+    const changePassBtn = document.getElementById('change-pass-btn');
+    const changePassModal = document.getElementById('changePassModal');
+    const closeChangePass = document.getElementById('close-change-pass');
+    const changePassForm = document.getElementById('change-pass-form');
+    
+    if (changePassBtn) {
+        changePassBtn.addEventListener('click', () => {
+            changePassForm.reset();
+            changePassModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    }
+    
+    if (closeChangePass) {
+        closeChangePass.addEventListener('click', () => {
+            changePassModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    }
+    
+    if (changePassForm) {
+        changePassForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const newPass = document.getElementById('new-password').value;
+            const confirmPass = document.getElementById('confirm-password').value;
+            
+            if (newPass !== confirmPass) {
+                showNotification('Passwords do not match!', 'error');
+                return;
+            }
+            
+            saveAdminPassword(newPass);
+            showNotification('Admin password changed successfully! Click "Export script.js" and commit the changes to make it permanent.', 'success');
+            changePassModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    }
+    
     const exportCodeBtn = document.getElementById('export-code-btn');
     if (exportCodeBtn) {
         exportCodeBtn.addEventListener('click', () => {
@@ -1445,6 +1482,10 @@ function initCertificates() {
         }
         if (event.target === certFormModal) {
             certFormModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        if (event.target === changePassModal) {
+            changePassModal.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
     });
