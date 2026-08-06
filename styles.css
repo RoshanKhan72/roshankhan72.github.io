@@ -741,6 +741,29 @@ section {
   box-shadow: var(--shadow-xl);
 }
 
+.internships-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.internship-card {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  gap: 1.5rem;
+  transition: var(--transition);
+}
+
+.internship-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
 .education-icon {
   width: 60px;
   height: 60px;
