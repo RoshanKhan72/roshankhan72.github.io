@@ -113,6 +113,23 @@
       </div>
     </nav>
 
+    <!-- Debug: show last modified timestamp to detect cached/old page -->
+    <div
+      id="build-info"
+      style="
+        text-align: center;
+        padding: 10px 0;
+        background: #fff4e5;
+        border-bottom: 3px solid #f59e0b;
+        color: #1f2937;
+        font-size: 0.95rem;
+        font-weight: 600;
+      "
+    >
+      Loaded from local workspace file:
+      <strong>d:\Projects\Portfolio\roshankhan72.github.io\index.html</strong> |
+      Page last modified: <span id="lastModified">(checking...)</span>
+    </div>
     <!-- Hero Section -->
     <section id="home" class="hero">
       <div class="hero-container">
@@ -230,10 +247,14 @@
               <h3>Programming</h3>
             </div>
             <div class="skill-tags">
-              <span class="tech-tag clickable-tech" data-tech="C">C</span> <br />
-              <span class="tech-tag clickable-tech" data-tech="Java">Java</span> <br />
-              <span class="tech-tag clickable-tech" data-tech="Python" 
-                >Python</span> <br />
+              <span class="tech-tag clickable-tech" data-tech="C">C</span>
+
+              <span class="tech-tag clickable-tech" data-tech="Java">Java</span>
+
+              <span class="tech-tag clickable-tech" data-tech="Python"
+                >Python</span
+              >
+
               >
               <span class="tech-tag clickable-tech" data-tech="JavaScript"
                 >JavaScript</span
@@ -703,23 +724,23 @@
             <div class="education-details">
               <h3>Software Development Intern</h3>
               <div class="education-info">
-                <span class="institution">Tech Innovators Pvt. Ltd.</span>
-                <span class="duration">Jun 2025 - Aug 2025</span>
+                <span class="institution">Swavik</span>
+                <span class="duration">Jan 2026 - Feb 2026</span>
               </div>
               <div class="education-description">
                 <p>
-                  Developed responsive web features, integrated REST APIs, and
-                  collaborated with the product team to improve performance and
-                  usability.
+                  Completed a focused internship at Swavik, contributing to
+                  software development tasks, debugging, and collaboration with
+                  the engineering team.
                 </p>
                 <ul>
                   <li>
-                    Implemented frontend components using JavaScript and modern
-                    frameworks.
+                    Worked on feature development, bug fixes, and code
+                    maintenance.
                   </li>
                   <li>
-                    Maintained code quality through Git-based workflows and code
-                    reviews.
+                    Collaborated using Git workflows and participated in sprint
+                    planning.
                   </li>
                 </ul>
               </div>
@@ -730,25 +751,25 @@
               <i class="fas fa-robot"></i>
             </div>
             <div class="education-details">
-              <h3>AI/ML Intern</h3>
+              <h3>Research Intern</h3>
               <div class="education-info">
-                <span class="institution">Data Pulse Labs</span>
-                <span class="duration">Dec 2024 - Feb 2025</span>
+                <span class="institution">Vicharanashala Lab, IIT Ropar</span>
+                <span class="duration">Jul 2026 - Present</span>
               </div>
               <div class="education-description">
                 <p>
-                  Assisted in building machine learning models, preparing
-                  datasets, and analyzing results to support predictive
-                  analytics initiatives.
+                  Currently working on research and development projects in the
+                  Vicharanashala Lab at IIT Ropar, focusing on machine learning
+                  and applied data science solutions.
                 </p>
                 <ul>
                   <li>
-                    Preprocessed data, trained models, and evaluated performance
-                    using Python and scikit-learn.
+                    Supporting experiments, model development, and research
+                    documentation.
                   </li>
                   <li>
-                    Presented insights and recommendations to stakeholders
-                    during weekly demos.
+                    Collaborating with lab researchers to explore AI-driven
+                    problems.
                   </li>
                 </ul>
               </div>
@@ -890,5 +911,19 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+      // Display browser's document.lastModified to help detect cached/old pages
+      try {
+        const el = document.getElementById("lastModified");
+        if (el) el.textContent = document.lastModified || "unknown";
+      } catch (e) {
+        console.error("build-info script error", e);
+      } // Add a second debug marker to verify this exact HTML page is loaded.
+      const marker = document.createElement("div");
+      marker.style.cssText =
+        "position:fixed;bottom:0;left:0;width:100%;background:#fde68a;color:#0f172a;font-size:0.9rem;padding:6px 10px;font-weight:700;z-index:9999;text-align:left;box-shadow:0 -2px 8px rgba(0,0,0,0.15);";
+      marker.textContent = "DEBUG PAGE: workspace index.html loaded";
+      document.body.appendChild(marker);
+    </script>
   </body>
 </html>
